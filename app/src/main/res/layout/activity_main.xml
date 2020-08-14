@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <RelativeLayout
+       android:id="@+id/relative_1"
+       android:layout_width="match_parent"
+       android:layout_height="50dp">
+       <TextView
+           android:id="@+id/textview_1"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:text="Create New Note "
+           android:textColor="#0E0E0E"
+           android:textSize="35dp"
+            />
+       <TextView
+           android:id="@+id/textview_2"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:textSize="20dp"
+           android:layout_alignParentRight="true"
+           android:text="SAVE"
+           android:textColor="#050505"
+           android:layout_toRightOf="@id/textview_1"
+           android:gravity="center"
+          ></TextView>
+   </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:id="@+id/editext_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Title"
+            android:textColorHint="#0E0E0E"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:background="@drawable/bg_edittext"
+            >
+
+        </EditText>
+        <EditText
+            android:id="@+id/editext_2"
+            android:layout_below="@id/editext_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:hint="Description"
+            android:gravity="clip_vertical"
+            android:textColorHint="#0E0E0E"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:background="@drawable/bg_edittext"
+            >
+
+        </EditText>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/textview_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remind me at:"
+            android:textColor="#3D3E3E"></TextView>
+
+        <TextView
+            android:id="@+id/textview_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_3"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-4dp"
+            android:text="14:20"
+            android:textColor="#272727"
+            android:textSize="35dp"></TextView>
+
+        <TextView
+            android:id="@+id/textview_day"
+            android:layout_below="@id/textview_3"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04/03/2016"
+            android:textSize="35dp"
+            android:textColor="#272727"
+            android:layout_marginLeft="20dp"></TextView>
+        <TextView
+            android:id="@+id/textview_type"
+            android:layout_below="@id/textview_time"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Type:"
+            android:textColor="#3D3E3E"
+            ></TextView>
+
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/bg_edittext"
+
+               android:layout_below="@+id/textview_time"
+               android:layout_marginTop="20dp"
+               android:layout_toRightOf="@id/textview_type">
+
+               <Spinner
+                   android:id="@+id/spinner_001"
+                   android:layout_width="120dp"
+                   android:layout_height="25dp"
+
+
+                   ></Spinner>
+           </RelativeLayout>
+
+
+        
+        <TextView
+            android:id="@+id/textview_tag"
+            android:layout_below="@id/textview_type"
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Tags:"
+            android:textColor="#3D3E3E"></TextView>
+        <TextView
+            android:id="@+id/textview_tagin"
+            android:layout_below="@id/textview_type"
+            android:layout_toRightOf="@+id/textview_tag"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Friend"
+            android:textStyle="bold"
+            android:textColor="#070000"></TextView>
+
+        <TextView
+            android:id="@+id/textview_week"
+            android:layout_below="@id/textview_tag"
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Weeks:"
+            android:textColor="#3D3E3E"></TextView>
+
+        <TextView
+            android:id="@+id/textview_weekin"
+            android:layout_below="@id/textview_tag"
+            android:layout_toRightOf="@+id/textview_week"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon,Tue,wed"
+            android:textStyle="bold"
+            android:textColor="#070404"></TextView>
+
+        <Button
+            android:id="@+id/btn_tune"
+            android:layout_below="@id/textview_week"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tune"></Button>
+    </RelativeLayout>
+
+</LinearLayout>
